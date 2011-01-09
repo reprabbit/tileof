@@ -4,12 +4,16 @@ width:120;
 height:200;
 border:2px solid black;
 background-color:blue;
-WebkitBorderTopLeftRadius: 10; 
-WebkitBorderTopRightRadius: 10; 
-WebkitBorderBottomLeftRadius: 10; 
-WebkitBorderBottomRightRadius: 10; 
-MozBorderRadius: 10; 
-BorderRadius: 10;
+
+-moz-border-radius: 8px;
+-webkit-border-radius: 8px;
+-khtml-border-radius: 8px;
+border-radius: 8px;
+
+padding:5px;
+margin:10px;
+
+}
 
 }
 
@@ -24,12 +28,14 @@ BorderRadius: 10;
 </style>
 
 <div class='card'>Foo</div>
-<script type="text/javascript" src="jq.js"></script>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+ 
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
 
 <script type="text/javascript">
 $("html").append($("<div>").attr("id","newcard").addClass('card').addClass('movable'));
 
-
+$(".card").draggable();
 
 
 
